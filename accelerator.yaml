@@ -1,0 +1,86 @@
+accelerator:
+  displayName: Machine learning with KubeFlow
+  description: Template for building a machine learning module with KubeFlow
+  iconUrl: https://raw.githubusercontent.com/dektlong/spring-kafka/main/spring-kafka.png
+  tags:
+  - emerging-patterns
+
+  options:
+  
+  - name: appDeploymentType
+    label: Deployment environment
+    description: Type of deployment configurations
+    required: true
+    defaultValue: tap
+    inputType: select
+    choices:
+      - value: tap
+        text: Tanzu App Platform
+      - value: k8s
+        text: K8s deployment
+      - value: cf
+        text: Tanzu App Service (cf)
+        
+  - name: gitRepo
+    label: Git repo
+    inputType: text
+    required: true
+    dataType: string
+    defaultValue: https://github.com/dektlong/my-event-driven
+    
+  - name: secConfig
+    label: Secure connections
+    inputType: select
+    defaultValue: jaas
+    required: true
+    choices:
+      - value: kerberos
+        text: Kerberos
+      - value: jaas
+        text: Jaas
+        
+  - name: addKafkaMetrics
+    label: Add Kafka Mertics
+    inputType: toggle
+    display: true
+    dataType: boolean
+    defaultValue: false
+      
+  - name: changeConfig
+    label: Change Kafka Broker config
+    description: Change default Spring Cloud Stream kafka broker configs
+    inputType: toggle
+    display: true
+    dataType: boolean
+    defaultValue: false
+
+  - name: defaultBrokerPort
+    label: Broker port
+    inputType: text
+    defaultValue: "9092"
+    dependsOn:
+      name: changeConfig
+      value: true
+  - name: autoCreateTopics
+    label: Auto creation of Topics
+    inputType: toggle
+    dataType: boolean
+    defaultValue: true
+    dependsOn:
+      name: changeConfig
+      value: true
+  - name: consumerProperties
+    label: Consumer-producer poperties
+    description: Key/Value map of arbitrary Kafka properties passed to both consumer and producer
+    inputType: multi-text
+    dataType: [string]
+    defaultValue:
+      - Key/Value map of Kafka properties
+    dependsOn:
+      name: changeConfig
+      value: true
+
+    
+      
+  
+
