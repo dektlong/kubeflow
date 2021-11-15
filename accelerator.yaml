@@ -28,7 +28,7 @@ accelerator:
     dataType: string
     defaultValue: https://github.com/dektlong/my-ml-workflow
     
- - name: models
+  - name: models
     label: Models and services
     inputType: checkbox
     required: true
