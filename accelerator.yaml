@@ -3,7 +3,7 @@ accelerator:
   description: Template for building a machine learning workflow with KubeFlow
   iconUrl: https://raw.githubusercontent.com/dektlong/kubeflow/main/kubeflow.png
   tags:
-  - emerging-patterns
+  - cloud-native-devs
 
   options:
   
