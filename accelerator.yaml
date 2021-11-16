@@ -16,8 +16,10 @@ accelerator:
     choices:
       - value: tap
         text: Tanzu App Platform workload
-      - value: native-AWS
+      - value: aws
         text: AWS native
+      - value: gcp
+        text: GCP native
         
   - name: gitRepo
     label: Git repo
