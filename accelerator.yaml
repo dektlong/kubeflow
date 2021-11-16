@@ -15,9 +15,7 @@ accelerator:
     inputType: select
     choices:
       - value: tap
-        text: Tanzu App Platform
-      - value: k8s
-        text: K8s deployment
+        text: Tanzu App Platform workload
       - value: native-AWS
         text: AWS native
         
