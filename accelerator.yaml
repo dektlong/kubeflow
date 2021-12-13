@@ -32,7 +32,8 @@ accelerator:
     label: Models and services
     inputType: checkbox
     required: true
-    defaultValue:  tenserRT
+    defaultValue:  [tenserRT]
+    dataType: [string]
     choices:
       - value: jupyyter
         text: Jupyter notebooks
