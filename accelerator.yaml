@@ -7,19 +7,19 @@ accelerator:
 
   options:
   
-  - name: appDeploymentType
-    label: Deployment environment
-    description: Type of deployment configurations
-    required: true
-    defaultValue: tap
-    inputType: select
-    choices:
-      - value: tap
-        text: Tanzu App Platform workload
-      - value: aws
-        text: AWS native
-      - value: gcp
-        text: GCP native
+  #- name: appDeploymentType
+  #  label: Deployment environment
+  #  description: Type of deployment configurations
+  #  required: true
+  #  defaultValue: tap
+  #  inputType: select
+  #  choices:
+  #    - value: tap
+  #      text: Tanzu App Platform workload
+  #    - value: aws
+  #      text: AWS native
+  #    - value: gcp
+  #      text: GCP native
         
   - name: gitRepo
     label: Git repo
