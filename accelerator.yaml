@@ -26,11 +26,11 @@ accelerator:
     inputType: text
     required: true
     dataType: string
-    defaultValue: https://github.com/dektlong/my-ml-workflow
+    defaultValue: my-ml-workflow
     
   - name: models
     label: Models and services
-    inputType: checkbox
+    inputType: select
     required: true
     defaultValue:  tenserRT
     choices:
