@@ -32,7 +32,7 @@ accelerator:
     label: Models and services
     inputType: select
     required: true
-    defaultValue:  tenserRT
+    defaultValue: tenserRT
     choices:
       - value: jupyyter
         text: Jupyter notebooks
